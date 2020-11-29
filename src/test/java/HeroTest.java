@@ -40,5 +40,13 @@ public class HeroTest {
         Hero heroTest = new Hero("yves",11,"boxing","fainting",squadTest.getId());
         assertEquals(1,heroTest.getId());
     }
+    @Test
+    public void testIfGetSquadIdAssignEachHeroToItsCorrectSquadId(){
+        Squad squadTest = new Squad("awesome",2,"fighting");
+        Hero heroTest = new Hero("yves",11,"boxing","fainting",squadTest.getId());
+        squadTest.addHero(heroTest);
+        assertEquals(squadTest.getId(),heroTest.getSquadId());
+    }
+
 
 }
