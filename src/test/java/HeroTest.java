@@ -47,6 +47,13 @@ public class HeroTest {
         squadTest.addHero(heroTest);
         assertEquals(squadTest.getId(),heroTest.getSquadId());
     }
-
+    @Test
+    public void testIfInstancesContainsHeroObjectsCreated(){
+        Squad squadTest = new Squad("awesome",2,"fighting");
+        Hero heroTest = new Hero("yves",11,"boxing","fainting",squadTest.getId());
+        Hero heroTest2 = new Hero("nkaka",13,"sniper","sleeping",squadTest.getId());
+        assertTrue(Hero.getHeroList().contains(heroTest));
+        assertTrue(Hero.getHeroList().contains(heroTest2));
+    }
 
 }
