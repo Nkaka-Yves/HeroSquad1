@@ -42,6 +42,11 @@ public class Hero {
   }
   public String getWeakness(){
       return weakness;
-  }
+  } public static Hero findHero(int n) {
+      return heroes.get(n-1);
+    }
+    public static void clearAll(){
+      heroes.clear();
+    }
 
 }
